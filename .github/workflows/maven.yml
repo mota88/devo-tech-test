@@ -36,5 +36,5 @@ jobs:
       - name: Step 4 - List the current directory
         run: ls -a
 
-      - name: Step 5 - What is in the target folder?
-        run: ls -a /devo-tech-test/target/
+      - name: Step 5 - List the directory target
+        run: ls -a /target/
