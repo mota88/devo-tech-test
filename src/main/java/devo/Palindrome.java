@@ -2,9 +2,8 @@ package devo;
 
 /** 
 * <h1>Palindrome</h1> 
-* This  program computes recursively computes 
-* whether a given string of characters forms a palindrome
-* or not.
+* This  program computes recursively whether a given
+* string of characters forms a palindrome or not.
 * <p>
 * <b>Note:</b> The program deals with strings that contain
 * the special characters , ; : and white spaces,

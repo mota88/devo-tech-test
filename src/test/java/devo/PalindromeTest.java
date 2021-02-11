@@ -8,7 +8,6 @@ public class PalindromeTest {
 
 private Palindrome palindrome;
 	
-	// runs before each test
 	@Before                                        
     public void setUp() throws Exception {
 		palindrome = new Palindrome();
@@ -34,14 +33,14 @@ private Palindrome palindrome;
 
     // ensure handling of words that are palindromes
     @Test
-    public void givenWord_testPalindrome() {
+    public void givenWord_testIsPalindrome() {
         for (String word : words)
             Assert.assertTrue(palindrome.isPalindrome(word));
     }
 
     // ensure handling of sentences that are palindromes
     @Test
-    public void givenSentence_testPalindrome() {
+    public void givenSentence_testIsPalindrome() {
         for (String sentence : sentences)
             Assert.assertTrue(palindrome.isPalindrome(sentence));
     }
