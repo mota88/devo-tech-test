@@ -38,7 +38,7 @@ public class Kcomplementary {
      * @return sb   A StringBuffer containing all the k-complementary
      * 				pairs of arr for the given k
      */
-    public StringBuffer checkPairs(int arr[], int k) {
+    public static StringBuffer checkPairs(int arr[], int k) {
     	StringBuffer sb = new StringBuffer();
     	// implementing a more efficient sorting method could improve time complexity
     	Arrays.sort(arr);
@@ -71,5 +71,25 @@ public class Kcomplementary {
         	sb.setLength(sb.length() - 2);
         }
         return sb;
+    }
+    public static void main(String[] args) {
+        if (args.length >= 2) {
+        	int k = Integer.parseInt(args[0]);
+        	int arr[] = new int[args.length - 1];
+        	for (int i = 1; i < args.length; i++) {
+        		arr[i-1] = Integer.parseInt(args[i]);
+        	}
+        	StringBuffer sb = checkPairs(arr, k);
+        	if (sb.length() > 0) {
+        		System.out.println(sb + " are " + String.valueOf(k) + "-complementary pairs.");
+            }
+    		else {
+    			System.out.println("There are no " + String.valueOf(k) 
+    			+ "-complementary pairs in the given input");
+    		}
+        }
+        else {
+        	System.out.println("At least two arguments expected.");
+        }
     }
 }

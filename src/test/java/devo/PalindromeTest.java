@@ -1,17 +1,9 @@
 package devo;
 
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 
 public class PalindromeTest {
-
-private Palindrome palindrome;
-	
-	@Before                                        
-    public void setUp() throws Exception {
-		palindrome = new Palindrome();
-    }
 
     private String[] words = {
             "Ana",
@@ -35,14 +27,14 @@ private Palindrome palindrome;
     @Test
     public void givenWord_testIsPalindrome() {
         for (String word : words)
-            Assert.assertTrue(palindrome.isPalindrome(word));
+            Assert.assertTrue(Palindrome.isPalindrome(word));
     }
 
     // ensure handling of sentences that are palindromes
     @Test
     public void givenSentence_testIsPalindrome() {
         for (String sentence : sentences)
-            Assert.assertTrue(palindrome.isPalindrome(sentence));
+            Assert.assertTrue(Palindrome.isPalindrome(sentence));
     }
 
 }

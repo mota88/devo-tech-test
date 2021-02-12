@@ -25,7 +25,7 @@ public class Palindrome {
      * @param str  The string to be checked
      * @return     The result of the boolean method recursivePalindrome()
      */
-    public boolean isPalindrome(String str) {
+    public static boolean isPalindrome(String str) {
         // removes , ; : and white spaces and convert to lower case
         String cleanStr = str.replaceAll("[,;:\\s+]", "").toLowerCase();
         // invokes recursive method passing initial and final positions
@@ -45,7 +45,7 @@ public class Palindrome {
      *               a palindrome; 
      *               <code>false</code> otherwise.
      */
-    private boolean recursivePalindrome(String str, int left, int right) {
+    private static boolean recursivePalindrome(String str, int left, int right) {
         // when the string has length 0, it is a palindrome
         if (left == right)
             return true;
@@ -59,7 +59,22 @@ public class Palindrome {
         if (left < right + 1) {
             return recursivePalindrome(str, left + 1, right - 1);
         }
-        // default return, never occurs
-        return false;
+        // default return true, occurs only for palindromes with even number of characters
+        return true;
+    }
+    public static void main(String[] args) {
+        if (args.length > 0) {
+        	for (String s: args) {
+        		if (isPalindrome(s) == true) {
+        			System.out.println(s + " is a palindrome!");
+        		}
+        		else {
+        			System.out.println(s + " is not a palindrome.");
+        		}
+        	}
+        }
+        else {
+        	System.out.println("No input given.");
+        }
     }
 }
