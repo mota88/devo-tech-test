@@ -1,6 +1,10 @@
 # devo-tech-test
 
-This is a set of three programs that compute respectively if a word is a palindrome, if a pair of numbers are k-complementary and the tf-idf of a set of terms from different documents.
+This is a set of three programs that implement the following:
+
+ 1. Check if a string is a palindrome. A string is a palindrome if the string matches the reverse of string.
+ 2. Find k-complementary pairs in a given array of integers. Given an array A, the pair (i, j) is k-complementary if K = A[i] + A[j];
+ 3. Tf-idf (term frequency-inverse document frequency) is an statistic that reflects the importance of a term T in a document D (or the relevance of a document for a searched term) relative to a document set S. Tf-idf can be extended to a set of terms TT adding the tf-idf for each term. Assume that we have a directory D containing a document set S, with one file per document. Documents will be added to that directory by external agents, but they will never be removed or overwritten. We are given a set of terms TT, and asked to compute the tf-idf of TT for each document in D, and report the N top documents sorted by relevance. The program must run as a daemon/service that is watching for new documents, and dynamically updates the computed tf-idf for each document and the inferred ranking.
 
 ## Requirements
 
